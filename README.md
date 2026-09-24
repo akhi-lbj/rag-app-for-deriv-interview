@@ -49,7 +49,20 @@ Answers + Citations <── Deterministic Validation <── Grounded Generation
 
 ## 2. Setup Steps
 
-### 1. Install Dependencies
+### Prerequisites & Requirements
+- **Python 3.10+**
+- **OpenAI API Key (Required for full RAG pipeline)**:
+  - Embeddings: `text-embedding-3-small` (1536 dim)
+  - Grounded Generation: `gpt-4o-mini`
+  *(Note: The system includes a deterministic offline fallback for offline evaluation environments without API keys).*
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/akhi-lbj/rag-app-for-deriv-interview.git
+cd rag-app-for-deriv-interview
+```
+
+### 2. Install Dependencies
 Using `uv`:
 ```bash
 uv sync
@@ -59,23 +72,26 @@ Or using standard `pip`:
 pip install -r requirements.txt
 ```
 
-### 2. Configure API Key
-Set your OpenAI key in `.env`:
+### 3. Configure OpenAI API Key
+Copy the `.env.example` template to `.env`:
+```bash
+cp .env.example .env
+```
+Open `.env` and set your OpenAI API key:
 ```ini
-OPENAI_API_KEY=sk-...
+OPENAI_API_KEY=sk-your_actual_openai_api_key_here
 EMBEDDING_MODEL=text-embedding-3-small
 GENERATION_MODEL=gpt-4o-mini
 ```
-*(Note: If `OPENAI_API_KEY` is not provided, the pipeline automatically falls back to an offline deterministic feature-hash embedding and extractive synthesizer so evaluation never crashes).*
 
-### 3. Run the Pipeline
+### 4. Run the Pipeline
 Run the full evaluation flow (ingests docs, indexes, retrieves, generates answers, validates, and regenerates all JSON artifacts):
 ```bash
 python run_pipeline.py
 ```
 *(or `uv run python run_pipeline.py` if using uv)*
 
-### 4. Interactive CLI & API
+### 5. Interactive CLI & API
 
 #### Start the Server
 Start the local API and interactive web interface:
