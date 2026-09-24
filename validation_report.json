@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "total_evaluated": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_rate": 100.0
+  },
+  "results": [
+    {
+      "question_id": "q1",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q2",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q3",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q4",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q5",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q6",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q7",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    },
+    {
+      "question_id": "q8",
+      "is_valid": true,
+      "checks": {
+        "non_empty_answer": true,
+        "citations_present_if_supported": true,
+        "citations_in_retrieved_docs": true,
+        "supported_flag_consistent": true
+      },
+      "details": [
+        "All deterministic validation checks passed."
+      ]
+    }
+  ]
+}

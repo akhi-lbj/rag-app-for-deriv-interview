@@ -1,0 +1,186 @@
+[
+  {
+    "question_id": "q1",
+    "retrieved_chunks": [
+      {
+        "doc_id": "account_security.md",
+        "chunk_id": "account_security.md_chunk_0",
+        "score": 0.963,
+        "text": "# Account Security and Authentication Policy\n\n## 1. Password Reset Policy\n- Users can request a password reset via the login screen by entering their registered email address.\n- **Attempt Limits**: Users are permitted a maximum of **3 password reset attempts per hour**.\n- If a user exceeds 3 attempts within an hour, the account is temporarily locked for security purposes for **60 minutes**.\n- Password reset links expire **15 minutes** after issuance."
+      },
+      {
+        "doc_id": "account_security.md",
+        "chunk_id": "account_security.md_chunk_1",
+        "score": 0.4946,
+        "text": "word reset links expire **15 minutes** after issuance.\n\n## 2. Password Strength Requirements\n- Passwords must be at least 12 characters in length.\n- Passwords must contain at least one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*).\n- Passwords cannot match any of the previous 5 passwords used on the account."
+      },
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_0",
+        "score": 0.4555,
+        "text": "# API Rate Limits and Throttling Policy\n\n## 1. Rate Limiting Tiers\nAll incoming API requests to the platform are subject to automated rate limiting based on the client's API tier:\n- **Standard Tier**:\n  - 60 requests per minute (RPM) per IP address / API key.\n  - 1,000 requests per hour (RPH).\n  - Burst allowance: up to 10 requests above RPM for spikes under 5 seconds.\n- **Enterprise Tier**:\n  - 600 requests per minute (RPM).\n  - 50,000 requests per day."
+      }
+    ]
+  },
+  {
+    "question_id": "q2",
+    "retrieved_chunks": [
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_2",
+        "score": 0.8325,
+        "text": "in the current window.\n- `X-RateLimit-Reset`: Unix epoch timestamp indicating when the current window resets.\n\n## 3. Rate Limit Exceeded Behavior (HTTP 429)\n- When a client breaches their allocated threshold, the API responds with **HTTP 429 Too Many Requests**.\n- The response body contains an error payload: `{\"error\": \"rate_limit_exceeded\", \"retry_after\": <seconds>}`."
+      },
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_1",
+        "score": 0.7519,
+        "text": "00 requests per minute (RPM).\n  - 50,000 requests per day.\n  - Custom endpoint allotments available upon architectural review.\n\n## 2. HTTP Headers Returned\nEvery API response includes real-time telemetry headers reflecting the client's quota status:\n- `X-RateLimit-Limit`: The maximum number of requests allowed in the current time window.\n- `X-RateLimit-Remaining`: The number of requests remaining in the current window."
+      },
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_0",
+        "score": 0.5889,
+        "text": "# API Rate Limits and Throttling Policy\n\n## 1. Rate Limiting Tiers\nAll incoming API requests to the platform are subject to automated rate limiting based on the client's API tier:\n- **Standard Tier**:\n  - 60 requests per minute (RPM) per IP address / API key.\n  - 1,000 requests per hour (RPH).\n  - Burst allowance: up to 10 requests above RPM for spikes under 5 seconds.\n- **Enterprise Tier**:\n  - 600 requests per minute (RPM).\n  - 50,000 requests per day."
+      }
+    ]
+  },
+  {
+    "question_id": "q3",
+    "retrieved_chunks": [
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_0",
+        "score": 0.8841,
+        "text": "# Identity Verification (KYC / AML) Guidelines\n\n## 1. Verification Tiers\nTo comply with global Anti-Money Laundering (AML) and Know Your Customer (KYC) regulations, accounts operate under two verification tiers:\n\n### Tier 1: Basic Identity Verification\n- **Required Documents**: Government-issued national ID card, passport, or driver's license, alongside a real-time liveness selfie check.\n- **Review SLA**: Automated verification completes within **15 minutes**."
+      },
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_1",
+        "score": 0.7599,
+        "text": "w SLA**: Automated verification completes within **15 minutes**.\n- **Privileges**: Enables deposits and standard platform access.\n\n### Tier 2: Enhanced Verification & Proof of Address\n- **Required Documents**: A utility bill, bank statement, or council tax statement issued within the last **90 days (3 months)** with the user's full name and residential address clearly visible.\n- **Review SLA**: Manual compliance review requires **24 to 48 business hours**."
+      },
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_2",
+        "score": 0.6169,
+        "text": "nual compliance review requires **24 to 48 business hours**.\n- **Privileges**: Unlocks higher withdrawal limits and fiat wire transfer operations.\n\n## 2. Strict Compliance and Non-Bypass Policy\n- All KYC verification workflows are governed by automated risk engines and certified compliance officers.\n- **Customer support agents have no technical or procedural ability to manually bypass, expedite, or override identity verification under any circumstances.**"
+      }
+    ]
+  },
+  {
+    "question_id": "q4",
+    "retrieved_chunks": [
+      {
+        "doc_id": "payment_and_withdrawals.md",
+        "chunk_id": "payment_and_withdrawals.md_chunk_2",
+        "score": 0.7263,
+        "text": "k fees apply.\n\n## 3. Minimum Withdrawal Amounts\n- Wire Transfers: Minimum withdrawal is **$50 USD** (or currency equivalent).\n- Digital Assets (USDC/USDT): Minimum withdrawal is **$10 USD**.\n\n## 4. Withdrawal Security Holds\n- For user protection against account compromise, modifying security credentials (such as password reset, 2FA re-enrollment, or email update) imposes an automated **24-hour security hold** on all withdrawal requests."
+      },
+      {
+        "doc_id": "account_security.md",
+        "chunk_id": "account_security.md_chunk_0",
+        "score": 0.634,
+        "text": "# Account Security and Authentication Policy\n\n## 1. Password Reset Policy\n- Users can request a password reset via the login screen by entering their registered email address.\n- **Attempt Limits**: Users are permitted a maximum of **3 password reset attempts per hour**.\n- If a user exceeds 3 attempts within an hour, the account is temporarily locked for security purposes for **60 minutes**.\n- Password reset links expire **15 minutes** after issuance."
+      },
+      {
+        "doc_id": "account_security.md",
+        "chunk_id": "account_security.md_chunk_3",
+        "score": 0.6115,
+        "text": "inutes.\n- Changing a password or updating security settings automatically triggers a 24-hour security hold on all outward asset transfers."
+      }
+    ]
+  },
+  {
+    "question_id": "q5",
+    "retrieved_chunks": [
+      {
+        "doc_id": "incident_escalation.md",
+        "chunk_id": "incident_escalation.md_chunk_3",
+        "score": 0.8264,
+        "text": "Post-Incident Review (PIR) Timeline\n- A blameless Post-Incident Review (PIR) document and retrospective meeting are mandatory for all **P1 and P2 incidents**.\n- The preliminary PIR report must be published internally within **72 hours** of incident resolution."
+      },
+      {
+        "doc_id": "incident_escalation.md",
+        "chunk_id": "incident_escalation.md_chunk_0",
+        "score": 0.7927,
+        "text": "# Platform Incident Severity and Escalation Policy\n\n## 1. Incident Severity Definitions and SLAs\nIncidents impacting platform availability or data integrity are categorized into four severity tiers:\n\n- **P1 - Critical Outage**:\n  - Full system outage, core trading engine unavailable, or severe data loss.\n  - **Initial Response SLA**: **15 minutes**.\n  - Escalation: Automatic paging of Executive Incident Commander and Primary On-Call Engineering Lead.\n- **P2 - Major Degradation**:"
+      },
+      {
+        "doc_id": "incident_escalation.md",
+        "chunk_id": "incident_escalation.md_chunk_1",
+        "score": 0.5794,
+        "text": "cident Commander and Primary On-Call Engineering Lead.\n- **P2 - Major Degradation**:\n  - Significant feature impairment or degraded API performance affecting >15% of active users.\n  - **Initial Response SLA**: **30 minutes**.\n- **P3 - Minor Incident**:\n  - Non-critical issue with viable operational workarounds available.\n  - **Initial Response SLA**: **4 hours**.\n- **P4 - Low Priority**:\n  - Cosmetic issues, minor administrative bugs, or non-blocking queries."
+      }
+    ]
+  },
+  {
+    "question_id": "q6",
+    "retrieved_chunks": [
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_0",
+        "score": 0.8052,
+        "text": "# Identity Verification (KYC / AML) Guidelines\n\n## 1. Verification Tiers\nTo comply with global Anti-Money Laundering (AML) and Know Your Customer (KYC) regulations, accounts operate under two verification tiers:\n\n### Tier 1: Basic Identity Verification\n- **Required Documents**: Government-issued national ID card, passport, or driver's license, alongside a real-time liveness selfie check.\n- **Review SLA**: Automated verification completes within **15 minutes**."
+      },
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_2",
+        "score": 0.6953,
+        "text": "nual compliance review requires **24 to 48 business hours**.\n- **Privileges**: Unlocks higher withdrawal limits and fiat wire transfer operations.\n\n## 2. Strict Compliance and Non-Bypass Policy\n- All KYC verification workflows are governed by automated risk engines and certified compliance officers.\n- **Customer support agents have no technical or procedural ability to manually bypass, expedite, or override identity verification under any circumstances.**"
+      },
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_1",
+        "score": 0.6406,
+        "text": "w SLA**: Automated verification completes within **15 minutes**.\n- **Privileges**: Enables deposits and standard platform access.\n\n### Tier 2: Enhanced Verification & Proof of Address\n- **Required Documents**: A utility bill, bank statement, or council tax statement issued within the last **90 days (3 months)** with the user's full name and residential address clearly visible.\n- **Review SLA**: Manual compliance review requires **24 to 48 business hours**."
+      }
+    ]
+  },
+  {
+    "question_id": "q7",
+    "retrieved_chunks": [
+      {
+        "doc_id": "payment_and_withdrawals.md",
+        "chunk_id": "payment_and_withdrawals.md_chunk_1",
+        "score": 0.724,
+        "text": "d within **1 to 3 business days** following compliance approval. Banks may require an additional 24-48 hours depending on intermediary routing.\n- **Credit/Debit Card Refunds/Payouts**: Typically settle within 3 to 5 business days.\n- **Cryptocurrency Withdrawals**: Automated and broadcast to the blockchain within **30 minutes** after requisite network security confirmations. Note: blockchain network fees apply."
+      },
+      {
+        "doc_id": "kyc_verification.md",
+        "chunk_id": "kyc_verification.md_chunk_2",
+        "score": 0.4125,
+        "text": "nual compliance review requires **24 to 48 business hours**.\n- **Privileges**: Unlocks higher withdrawal limits and fiat wire transfer operations.\n\n## 2. Strict Compliance and Non-Bypass Policy\n- All KYC verification workflows are governed by automated risk engines and certified compliance officers.\n- **Customer support agents have no technical or procedural ability to manually bypass, expedite, or override identity verification under any circumstances.**"
+      },
+      {
+        "doc_id": "payment_and_withdrawals.md",
+        "chunk_id": "payment_and_withdrawals.md_chunk_3",
+        "score": 0.2622,
+        "text": "urity hold** on all withdrawal requests.\n- Crypto withdrawals to newly whitelisted wallet addresses require a 6-hour cooling-off period."
+      }
+    ]
+  },
+  {
+    "question_id": "q8",
+    "retrieved_chunks": [
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_0",
+        "score": 0.7209,
+        "text": "# API Rate Limits and Throttling Policy\n\n## 1. Rate Limiting Tiers\nAll incoming API requests to the platform are subject to automated rate limiting based on the client's API tier:\n- **Standard Tier**:\n  - 60 requests per minute (RPM) per IP address / API key.\n  - 1,000 requests per hour (RPH).\n  - Burst allowance: up to 10 requests above RPM for spikes under 5 seconds.\n- **Enterprise Tier**:\n  - 600 requests per minute (RPM).\n  - 50,000 requests per day."
+      },
+      {
+        "doc_id": "account_security.md",
+        "chunk_id": "account_security.md_chunk_2",
+        "score": 0.2838,
+        "text": "ctor authentication (2FA) via authenticator app (TOTP) is mandatory for all accounts handling financial transactions or API keys.\n- SMS 2FA is supported as a secondary fallback only if TOTP has already been configured.\n- Users are provided with 10 single-use recovery codes upon 2FA setup."
+      },
+      {
+        "doc_id": "api_rate_limits.md",
+        "chunk_id": "api_rate_limits.md_chunk_1",
+        "score": 0.2127,
+        "text": "00 requests per minute (RPM).\n  - 50,000 requests per day.\n  - Custom endpoint allotments available upon architectural review.\n\n## 2. HTTP Headers Returned\nEvery API response includes real-time telemetry headers reflecting the client's quota status:\n- `X-RateLimit-Limit`: The maximum number of requests allowed in the current time window.\n- `X-RateLimit-Remaining`: The number of requests remaining in the current window."
+      }
+    ]
+  }
+]

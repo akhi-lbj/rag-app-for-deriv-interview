@@ -1,0 +1,42 @@
+[
+  {
+    "id": "q1",
+    "question": "How many password reset attempts are allowed per hour?",
+    "expected_behavior": "answerable"
+  },
+  {
+    "id": "q2",
+    "question": "What HTTP status code and response headers indicate an API rate limit has been exceeded?",
+    "expected_behavior": "answerable"
+  },
+  {
+    "id": "q3",
+    "question": "How long does standard Tier 2 identity verification take to be reviewed?",
+    "expected_behavior": "answerable"
+  },
+  {
+    "id": "q4",
+    "question": "Is there any withdrawal hold after updating an account password or email?",
+    "expected_behavior": "answerable"
+  },
+  {
+    "id": "q5",
+    "question": "What is the response SLA and PIR timeline for a P1 critical outage?",
+    "expected_behavior": "answerable"
+  },
+  {
+    "id": "q6",
+    "question": "Can users pay an expedite fee of $50 to speed up Tier 2 KYC verification within 1 hour?",
+    "expected_behavior": "unanswerable"
+  },
+  {
+    "id": "q7",
+    "question": "Can customer support issue full refunds for cryptocurrency transactions sent to an incorrect blockchain address?",
+    "expected_behavior": "unanswerable"
+  },
+  {
+    "id": "q8",
+    "question": "What discount percentage is offered to customers who prepay for annual Enterprise API subscriptions?",
+    "expected_behavior": "unanswerable"
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "question_id": "q1",
+    "answer": "Users are permitted a maximum of 3 password reset attempts per hour.",
+    "citations": [
+      "account_security.md"
+    ],
+    "supported": true
+  },
+  {
+    "question_id": "q2",
+    "answer": "When an API rate limit has been exceeded, the HTTP status code returned is 429 (Too Many Requests). The response body contains an error payload indicating the rate limit has been exceeded, along with a 'retry_after' value in seconds.",
+    "citations": [
+      "api_rate_limits.md"
+    ],
+    "supported": true
+  },
+  {
+    "question_id": "q3",
+    "answer": "Standard Tier 2 identity verification requires a manual compliance review that takes 24 to 48 business hours.",
+    "citations": [
+      "kyc_verification.md"
+    ],
+    "supported": true
+  },
+  {
+    "question_id": "q4",
+    "answer": "Yes, updating an account password or email triggers a 24-hour security hold on all withdrawal requests.",
+    "citations": [
+      "payment_and_withdrawals.md",
+      "account_security.md"
+    ],
+    "supported": true
+  },
+  {
+    "question_id": "q5",
+    "answer": "The initial response SLA for a P1 critical outage is 15 minutes, and the preliminary Post-Incident Review (PIR) report must be published internally within 72 hours of incident resolution.",
+    "citations": [
+      "incident_escalation.md"
+    ],
+    "supported": true
+  },
+  {
+    "question_id": "q6",
+    "answer": "The documentation states that customer support agents have no ability to manually bypass, expedite, or override identity verification under any circumstances, including for Tier 2 KYC verification. Therefore, users cannot pay an expedite fee to speed up the process.",
+    "citations": [],
+    "supported": false
+  },
+  {
+    "question_id": "q7",
+    "answer": "The documentation does not support the claim that customer support can issue full refunds for cryptocurrency transactions sent to an incorrect blockchain address.",
+    "citations": [],
+    "supported": false
+  },
+  {
+    "question_id": "q8",
+    "answer": "The documentation does not support or contain information regarding discount percentages for customers who prepay for annual Enterprise API subscriptions.",
+    "citations": [],
+    "supported": false
+  }
+]
